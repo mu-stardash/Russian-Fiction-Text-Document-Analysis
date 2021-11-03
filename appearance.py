@@ -8,10 +8,10 @@ from navec import Navec
 from slovnet import Syntax 
 
 def appearance_character(text, name):    
-    # Разделение текста на предложения 
+    # Dividing text into sentences 
     sentences = tok.sent_tokenize(text)
     
-    # Создание словаря предложений, в которых встречаются имена 
+    # Creating a dictionary of sentences in which names occur 
     dictionary = dict()
     
     morph = pymorphy2.MorphAnalyzer()
@@ -41,7 +41,7 @@ def appearance_character(text, name):
             previous = p
     
     
-    # Нахождение описания персонажей с помощью синтаксического анализатора 
+    #  Finding Character Descriptions using a Syntax Analysis
     navec = Navec.load('navec_news_v1_1B_250K_300d_100q.tar')
     syntax = Syntax.load('slovnet_syntax_news_v1.tar') 
     syntax.navec(navec)
