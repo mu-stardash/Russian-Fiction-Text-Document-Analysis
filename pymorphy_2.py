@@ -7,6 +7,7 @@ import time
 
 start_time = time.time()
 
+# 30 sentences
 text = """
 И они хотели, чтобы мама непременно мыла в классе полы. 
 Мы вошли в дом втроём: я, сын, собака.
@@ -46,7 +47,7 @@ for sent in text:
     print(sent)
     words = word_tokenize(sent)
     for word in words:
-        p = morph.parse(word)[0]
+        p = morph.parse(word)[0] # morph analysis 
         for k in morph.parse(word):
             print(p.normal_form, k.tag)
             break
