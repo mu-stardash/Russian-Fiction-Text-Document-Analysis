@@ -5,13 +5,9 @@ from os import name
 import pymorphy2
 import string
 import nltk
-import re
-
-import numpy as np
 from urllib import request
 from bs4 import BeautifulSoup
 from nltk.tokenize import sent_tokenize,word_tokenize
-from textblob import TextBlob
 from nltk.probability import FreqDist
 
 
