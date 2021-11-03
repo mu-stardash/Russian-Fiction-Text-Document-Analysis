@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Oct 28 19:03:38 2021
-
-@author: DashaEfimova
-"""
 
 import PySimpleGUI as sg
 from urllib import request
