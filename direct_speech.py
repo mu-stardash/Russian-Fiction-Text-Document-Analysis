@@ -13,7 +13,7 @@ def direct_speech(text, name):
 
     last = []
     
-    # Функция нахождения фраз - описаний персонажа
+    # Function for finding phrases - character descriptions
     def phrases(i, sent):
         #i = 0
         string_phrase = []
@@ -42,10 +42,10 @@ def direct_speech(text, name):
     
     text2 = re.findall('(\–|\"|\'|\«)(.+?)(\!|\?|\,|\.{3}|\.|\"|\'|\»)', text)
     
-    # Разделяем текст на предложения
+    # Divide the text into sentences
     sentences = tokenize.sent_tokenize(text)
     
-    # Создаём словарь предложений, в которых встречаются имена
+    # Creating a dictionary of sentences in which names occur
     dictionary = {}
     morph = pymorphy2.MorphAnalyzer()
     
@@ -68,8 +68,8 @@ def direct_speech(text, name):
     # for key, value in dictionary.items():
     #     print('{0}: {1}'.format(key, value), '\n')
     
-    # Проверка, что все прямые речи начинаются с большой буквы в
-    # найденных предложениях регуляркой (не слова автора)
+    # Check that all direct speeches begin with a capital letter in 
+    # the found sentences with regular expressions (not the words of the author)
     mylist = []
     for x in text2:
         kort=x[1]
@@ -82,7 +82,7 @@ def direct_speech(text, name):
     all_phrases = set()
     
     
-    i = 0 # это должно отвечать за позицию предложения в тексте. Получить индекс из text (токенезированный текст)
+    i = 0 # this is responsible for the position of the sentence in the text. Get an index from text (tokenized text)
     for key, value in dictionary.items():
         dict[key]=[]
         for sent in value:
