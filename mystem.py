@@ -42,12 +42,8 @@ text = """
 На площади видно стаю голубей.
 """
 
-
-
 text = sent_tokenize(text)
 m = Mystem()
-
-
 
 for sentence in text:
     print("------------------------------------------------")
@@ -66,14 +62,3 @@ print("--- %s seconds ---" % (time.time() - start_time))
 
 print (json.dumps(m.analyze(text), ensure_ascii = False))
 
-
-
-# text1 = """Misha buries himself in the hay. Gone is the blue day. The hay is greenish, hazy.
-# """
-
-# text1 = sent_tokenize(text1)
-# print(text1)
-
-# for x in text1:
-#     tex = word_tokenize(x)
-#     print(tex)
