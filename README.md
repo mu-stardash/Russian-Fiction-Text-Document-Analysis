@@ -34,4 +34,4 @@ In the files names_rules.py, names_Natasha.py, algorithms for finding names are 
 
 In the files pymorphy_2.py, mystem.py, morphological parsing of sentences and lemmatization of words are implemented. The first file uses the Pymorphy2 analyzer, the second uses the Pymystem3. You can use them to compare how algorithms work on different texts.
 
-You can read the detailed work of the algorithms in the report.
+You can read the detailed work of the algorithms in the report (in file NLP.pdf).
