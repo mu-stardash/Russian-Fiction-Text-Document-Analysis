@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-
 from nltk import tokenize as tok 
 import pymorphy2
 from razdel import sentenize, tokenize 
