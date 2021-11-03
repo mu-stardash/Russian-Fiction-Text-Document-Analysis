@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Oct 22 15:15:32 2021
-
-@author: DashaEfimova
-"""
 
 import pymorphy2
 morph = pymorphy2.MorphAnalyzer()
@@ -16,17 +11,7 @@ text = """
 Myron tells it without bragging or rancor.
 """
 
-
-text = sent_tokenize(text)
-
-# for sent in text:
-#     words = word_tokenize(sent)
-#     for word in words:
-#         p = morph.parse(word)[0]
-#         print(p.normal_form)
-#         print(p)
-#     print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
- 
+text = sent_tokenize(text) 
     
 for sent in text:
     print(sent)
@@ -36,6 +21,6 @@ for sent in text:
         for k in morph.parse(word):
             print(p.normal_form, k.tag)
             break
-    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    print("-----------------------------------------------------------------")
     
 print("--- %s seconds ---" % (time.time() - start_time))
