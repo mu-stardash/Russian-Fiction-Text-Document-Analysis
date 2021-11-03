@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Oct 24 21:35:18 2021
-
-@author: DashaEfimova
-"""
 
 from natasha import (
     Segmenter,
