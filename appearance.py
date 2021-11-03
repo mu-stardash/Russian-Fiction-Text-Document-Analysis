@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Oct 29 16:15:55 2021
 
-@author: DashaEfimova
-"""
 
 from nltk import tokenize as tok 
 import pymorphy2
