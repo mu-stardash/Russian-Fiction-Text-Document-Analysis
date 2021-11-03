@@ -67,27 +67,20 @@ def search_names(text):
     return names
 
 def load_link(values, window):
-    # url = values['link']
+    url = values['link']
 
-    # if url.find('http://') == -1:
-    #     print("Incorrect!")
-    #     window['link'].Update('Insert the link to the book ...')
-    #     return
+    if url.find('http://') == -1:
+        print("Incorrect!")
+        window['link'].Update('Insert the link to the book ...')
+        return
     
-    # response=request.urlopen(url)
+    response=request.urlopen(url)
 
-    # soup = BeautifulSoup(response, 'lxml')
-    # soup=soup.findAll('p',class_='tab')
-    # text=''
-    # for i in soup:
-    #     text+=i.getText().rstrip()
-    
-    text ="""Красивая Маша в розовой кофте лежала на кровати и мерила температуру. Уставший Петя тоже мерил температуру, вытянув ноги на спинку, и читал газету.
-– Все то же, – сказала испуганная Маша, посмотрев на градусник.
-– Ну и ладно, – прошептал Иван.
-– Дамы и господа, – сказала Маша.
-– Ну и хорошо!
-– Ты абсолютно прав."""
+    soup = BeautifulSoup(response, 'lxml')
+    soup=soup.findAll('p',class_='tab')
+    text=''
+    for i in soup:
+        text+=i.getText().rstrip()
 
     names = search_names(text)
     for name in names:
