@@ -61,4 +61,3 @@ for sentence in text:
 print("--- %s seconds ---" % (time.time() - start_time))
 
 print (json.dumps(m.analyze(text), ensure_ascii = False))
-
