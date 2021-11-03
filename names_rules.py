@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Oct 24 21:52:56 2021
-
-@author: DashaEfimova
-"""
 
 from os import name
 
@@ -28,13 +23,6 @@ nltk.download('punkt')
 prob_thresh = 0.30
 morph = pymorphy2.MorphAnalyzer()
  
-# inp = open('input.txt', 'r', encoding='utf-8')
-# text = inp.read()
-# inp.close()
-
-
-
-
 
 url="http://shmelev.lit-info.ru/shmelev/proza/rasskaz/lihoradka.htm"
 # url = "http://tolstoy-lit.ru/tolstoy/vospominaniya/shmelev-kak-ya-hodil-k-tolstomu.htm"
@@ -89,11 +77,11 @@ list = []
 
 fd = FreqDist(names)
 print(fd.most_common(50))
-# for line in output: 
-#     if line not in list:
-#         list.append(line)
-# with open('output.txt', 'w', encoding='utf-8') as out:
-#     out.write('\n'.join(list).title())
+for line in output: 
+    if line not in list:
+        list.append(line)
+with open('output.txt', 'w', encoding='utf-8') as out:
+    out.write('\n'.join(list).title())
 print(output)
 print(names)
 
