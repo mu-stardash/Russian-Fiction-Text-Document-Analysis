@@ -25,9 +25,8 @@ Along with the main file, the following files should be present in the folder:
 - temp.py - an algorithm for looking for actions.
 
 Since temp.py and appearance.py use two dictionaries Navec and Slovnet for parsing, you must download and add the archives of these dictionaries to the same folder.
-To download Navec: https://github.com/natasha/navec (download navec_news_v1_1B_250K_300d_100q.tar, it is located in the Readme section)
-To download Slovnet: https://github.com/natasha/slovnet (download slovnet_ner_news_v1.tar, it is located in the Readme section)
-
+- To download Navec: https://github.com/natasha/navec (download navec_news_v1_1B_250K_300d_100q.tar, it is located in the Readme section)
+- To download Slovnet: https://github.com/natasha/slovnet (download slovnet_ner_news_v1.tar, it is located in the Readme section)
 
 In the files names_rules.py, names_Natasha.py, algorithms for finding names are implemented. For the first file, this is a search using independently compiled rules, for the second, using the Natasha library. You can use them to compare how algorithms work on different texts. Also, in these files, graphs of the occurrence of names are built using the FreqDist module from nltk.probability.
 
