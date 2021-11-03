@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Oct 28 20:00:46 2021
-
-@author: DashaEfimova
-"""
-
 import re
 import pymorphy2
 from nltk import tokenize
