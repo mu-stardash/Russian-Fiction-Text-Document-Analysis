@@ -3,7 +3,9 @@ from navec import Navec
 from slovnet import Syntax
 
 def actions_character(text, name):
-
+# otvet - list of names
+# deps stores the links between words and the name of the link
+# words stores the text divided into tokens
     chunk = []
     slovar = []
 
@@ -28,7 +30,7 @@ def actions_character(text, name):
             target = int(token.id) - 1
             if source > 0 and source != target:  # skip root, loops
                 deps.append([source, target, token.rel])
-    # show_markup(words, deps)
+    # show_markup(words, deps) # if you want to see connections between words in a sentence, uncomment these 2 lines
     # print(deps)
         for i in range(len(deps)):
             if words[deps[i][1]] ==name: # if this is a name
@@ -51,8 +53,3 @@ def actions_character(text, name):
         
         words.clear()
         deps.clear()
-        
-    #print(otvet)
-
-# deps stores the links between words and the name of the link
-# words stores the text divided into tokens
