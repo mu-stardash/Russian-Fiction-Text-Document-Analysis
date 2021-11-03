@@ -19,9 +19,8 @@ nltk.download('punkt')
 prob_thresh = 0.30
 morph = pymorphy2.MorphAnalyzer()
  
-
+# you can change the link
 url="http://shmelev.lit-info.ru/shmelev/proza/rasskaz/lihoradka.htm"
-# url = "http://tolstoy-lit.ru/tolstoy/vospominaniya/shmelev-kak-ya-hodil-k-tolstomu.htm"
 response=request.urlopen(url)
 
 soup = BeautifulSoup(response, 'lxml')
@@ -31,11 +30,11 @@ for i in soup:
     text+=i.getText().rstrip()
 
 names = []
-marks = str.maketrans(dict.fromkeys(string.punctuation)) # убирает знаки препинания 
+marks = str.maketrans(dict.fromkeys(string.punctuation)) # remove punctuation
 without_marks = text.translate(marks)
 text1 = without_marks.split()
  
-processed_text = [x for x in text1 if not x in stop] # убирает стоп слова
+processed_text = [x for x in text1 if not x in stop] # remove stop-words
 output = set()
 i = 0
 while i < len(processed_text):
@@ -67,17 +66,20 @@ while i < len(processed_text):
                   names.append(first)
                   break
     i += 1
- 
 list = []
 
-
+# graphic
 fd = FreqDist(names)
 print(fd.most_common(50))
+
+# if you don't need ti see results in file, comment it
 for line in output: 
     if line not in list:
         list.append(line)
 with open('output.txt', 'w', encoding='utf-8') as out:
     out.write('\n'.join(list).title())
+  
+  
 print(output)
 print(names)
 
