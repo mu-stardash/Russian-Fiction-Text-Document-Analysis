@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Oct 22 15:03:50 2021
-
-@author: DashaEfimova
-"""
 
 import json
 from pymystem3 import Mystem
@@ -11,8 +6,9 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 import time
 start_time = time.time()
 
-#m._disambiguation == True    # омонимия включена по умолчанию
-# m.HOMONYMS_DETECTION = True # или так
+#m._disambiguation == True    # homonymy is enabled by default
+# m.HOMONYMS_DETECTION = True # homonymy is enabled by default (the second way)
+
 text = """
 И они хотели, чтобы мама непременно мыла в классе полы. 
 Мы вошли в дом втроём: я, сын, собака.
