@@ -1,5 +1,6 @@
 # Russian-Fiction-Text-Document-Analysis
 NLP project at the university of Oulu, autumn 2021
+
 The project was carried out by two students Daria Efimova, Polina Chainikova
 
 To run the program, you need to put some files in one folder and install the libraries.
@@ -18,7 +19,7 @@ The following libraries were used in these programs (to install them, enter the 
 
 The main file is interface_NLP.py, which must be run. For this, such environments as Anaconda (Spyder), Visual Studio Code can be used.
 interface_NLP.py creates a program interface and handles push buttons. You can try to insert, for example, works from this site: http://shmelev.lit-info.ru/shmelev/proza/solnce-mertvyh/solnce-mertvyh.htm
-After adding the link, click Add and the program will start its work # (you should wait about 3-5 minutes). 
+After adding the link, click Add and the program will start its work (you should wait about 3-5 minutes! Don't worry if the app says "Not responding"). 
 
 Along with the main file, the following files should be present in the folder:
 - appearance.py is an algorithm for finding the appearance of characters
