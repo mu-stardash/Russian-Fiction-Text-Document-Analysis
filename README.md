@@ -1,4 +1,6 @@
 # Russian-Fiction-Text-Document-Analysis
+[![GitHub forks](https://img.shields.io/github/forks/mu-stardash/Russian-Fiction-Text-Document-Analysis?color=pink&style=plastic)](https://github.com/mu-stardash/Russian-Fiction-Text-Document-Analysis/network)
+
 NLP project at the university of Oulu, autumn 2021
 
 The project was carried out by two students Daria Efimova, Polina Chainikova
